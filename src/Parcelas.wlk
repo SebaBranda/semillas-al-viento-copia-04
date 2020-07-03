@@ -7,7 +7,7 @@ class Parcela {
 	var property horasDeSolAlDia = 0
 	var property plantas = []	
 	
-		
+	method asociaBienPara(unaPlanta)	
 	
 	method superficie(){
 		return ancho * largo
@@ -48,13 +48,13 @@ class Parcela {
 }	
 class ParcelaEcologica inherits Parcela{	
 	
-	method asociaBienPara(unaPlanta){
+	override method asociaBienPara(unaPlanta){
 		return self.tieneSangreJoven() and unaPlanta.parcelaIdeal(self) 
 	}
 }
 class ParcelaIndustrial inherits Parcela{	
 	
-	method asociaBienPara(unaPlanta){
+	override method asociaBienPara(unaPlanta){
 		return plantas.size() <= 2 and unaPlanta.esFuerte()
 	}
 }

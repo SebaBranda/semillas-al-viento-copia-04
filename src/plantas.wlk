@@ -10,7 +10,7 @@ class Plantas {
 	method parcelaIdeal(unaparcela)
 	
 	method seAsociaBienA(unaParcela){
-		return unaParcela.asociaBienpara(self) 
+		return unaParcela.asociaBienPara(self) 
 	}	
 }
 
