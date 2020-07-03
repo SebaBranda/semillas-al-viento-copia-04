@@ -51,8 +51,9 @@ test "plantas" {
 	
 	///punto 5
 	const parceEcologica = new ParcelaEcologica(ancho=10, largo=2, horasDeSolAlDia=10)
-	assert.that(parceEcologica.asociaBienPara(sojita2))
-	
+	assert.notThat(parceEcologica.asociaBienPara(sojita2))
+	assert.notThat(parceEcologica.asociaBienPara(mentita))
+	assert.notThat(parceEcologica.asociaBienPara(quino))
 	
 
 }
